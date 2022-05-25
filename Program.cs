@@ -19,7 +19,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container. aaa
 
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -53,6 +52,26 @@ builder.Services.AddAuthentication(options =>
         };
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Aluno",
+        policy =>
+        {
+            policy.WithOrigins("https://masterquizapi.herokuapp.com/api/Quiz")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+        });
+
+    options.AddPolicy("Professor",
+        policy =>
+        {
+            policy.WithOrigins("https://masterquizapi.herokuapp.com")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+        });
+});
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -60,6 +79,8 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseRouting();
+app.UseCors();
 
 app.UseHttpsRedirection();
 

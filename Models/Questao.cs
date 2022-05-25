@@ -14,6 +14,6 @@ namespace QuizApi.Models
 
         public string descricaoquestao {get; set;}
 
-        public int idmateria {get; set;}
+        public string idmateria {get; set;}
     }
 }

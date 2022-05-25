@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dudu_\\source\\repos\\MasterQuiz\\QuizApi.csproj": {}
+    "C:\\Users\\Rheydne\\QuizApi\\QuizApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dudu_\\source\\repos\\MasterQuiz\\QuizApi.csproj": {
+    "C:\\Users\\Rheydne\\QuizApi\\QuizApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dudu_\\source\\repos\\MasterQuiz\\QuizApi.csproj",
+        "projectUniqueName": "C:\\Users\\Rheydne\\QuizApi\\QuizApi.csproj",
         "projectName": "QuizApi",
-        "projectPath": "C:\\Users\\dudu_\\source\\repos\\MasterQuiz\\QuizApi.csproj",
-        "packagesPath": "C:\\Users\\dudu_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dudu_\\source\\repos\\MasterQuiz\\obj\\",
+        "projectPath": "C:\\Users\\Rheydne\\QuizApi\\QuizApi.csproj",
+        "packagesPath": "C:\\Users\\Rheydne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rheydne\\QuizApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dudu_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Rheydne\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +41,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -105,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,6 +7,7 @@ using QuizApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Cors;
 
 namespace QuizApi.Controllers
 {
@@ -31,7 +32,7 @@ namespace QuizApi.Controllers
 
         // GET: api/Quiz/5
         [HttpGet("{idMateria}")]
-        public ActionResult GetQuiz(int idMateria)
+        public ActionResult GetQuiz(string idMateria)
         {
             List <Questao>perguntas = new List<Questao>();
             List <Questao>quizPerguntas = new List<Questao>();
@@ -92,24 +93,18 @@ namespace QuizApi.Controllers
             return quiz;
         }
 
-        // GET: api/Quiz/5
-        [HttpGet("Resultado/{idAluno}")]
-        public ActionResult<List<Quiz>> GetResultado(int idAluno){
+        // GET: api/Quiz
+        [HttpGet("Resultado")]
+        public ActionResult<List<Quiz>> GetResultado(){
             
             List<Quiz> lista = new List<Quiz>();
-            List<Quiz> listaAluno = new List<Quiz>();
             lista = _context.quizzes.ToList();
 
-            for(int i = 0; i<lista.Count(); i++){
-                if(lista[i].idaluno == idAluno)
-                    listaAluno.Add(lista[i]);
-            }
-
-            if(listaAluno == null){
+            if(lista == null){
                 return NotFound();
             }
 
-            return listaAluno;
+            return lista;
         }
     }
 }

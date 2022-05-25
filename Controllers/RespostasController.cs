@@ -10,9 +10,11 @@ using QuizApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Cors;
 
 namespace QuizApi.Controllers
 {
+    //[EnableCors("Professor")]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]

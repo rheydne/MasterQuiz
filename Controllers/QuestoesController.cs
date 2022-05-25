@@ -10,10 +10,12 @@ using QuizApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Cors;
 
 namespace QuizApi.Controllers
 {
     [Authorize]
+    [EnableCors("Professor")]
     [Route("api/[controller]")]
     [ApiController]
     public class QuestoesController : ControllerBase
@@ -53,7 +55,7 @@ namespace QuizApi.Controllers
         }
 
         [HttpGet("Materia/{idMateria}")]
-        public ActionResult<List<Resposta>> GetQuestoesMateria(int idMateria)
+        public ActionResult<List<Resposta>> GetQuestoesMateria(string idMateria)
         {
             List <Questao>listaQuestoes = new List<Questao>();
 

@@ -864,3 +864,4 @@ C:\Users\dudu_\source\repos\MasterQuiz\obj\Debug\net6.0\refint\QuizApi.dll
 C:\Users\dudu_\source\repos\MasterQuiz\obj\Debug\net6.0\QuizApi.genruntimeconfig.cache
 C:\Users\dudu_\source\repos\MasterQuiz\obj\Debug\net6.0\ref\QuizApi.dll
 C:\Users\dudu_\source\repos\MasterQuiz\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Rheydne\QuizApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

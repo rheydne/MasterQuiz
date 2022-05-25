@@ -2,5 +2,5 @@ using QuizApi.Models;
 
 public interface IQuestoesServices{
 
-    List<Questao> GetQuestoesMateria(int Mat);
+    List<Questao> GetQuestoesMateria(string Mat);
 }

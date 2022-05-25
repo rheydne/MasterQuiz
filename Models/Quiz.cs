@@ -13,7 +13,7 @@ namespace QuizApi.Models
 
         public TimeSpan tempoquiz {get; set;}
 
-        public int materiaquiz {get; set;}
+        public string materiaquiz {get; set;}
 
         public int idaluno {get; set;}
     }

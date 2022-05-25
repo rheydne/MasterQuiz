@@ -18,7 +18,7 @@ public class QuestoesServices: IQuestoesServices{
     
     private int qtdQuestoesQuiz = 2;
 
-    public List<Questao> GetQuestoesMateria(int materia)
+    public List<Questao> GetQuestoesMateria(string materia)
     {
         List <Questao>perguntas = new List<Questao>();
         List <Questao>perguntasMateria = new List<Questao>();
